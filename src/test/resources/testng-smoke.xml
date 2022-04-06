@@ -3,7 +3,7 @@
 <suite name="Smoke" verbose="1">
     <test name="LoginPageTest">
         <classes>
-            <class name="org.tms.test.LoginPageTest" />              //тот класс который будет запускаться, закрыв тег /
+            <class name="org.tms.test.LoginPageTest" />
         </classes>
     </test>
 </suite>

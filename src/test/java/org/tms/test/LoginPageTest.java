@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import org.tms.page.InventoryPage;
 import org.tms.service.LoginPageService;
 
-public class LoginPageTest extends BaseTest {             //8. тестирует страницу логина
+public class LoginPageTest extends BaseTest {             //8. тестирует страницу логина, LoginPageTest запускается testng-smoke.xml
 
     private LoginPageService loginPageService = new LoginPageService();
 
