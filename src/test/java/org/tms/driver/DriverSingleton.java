@@ -20,18 +20,18 @@ public class DriverSingleton {         //1.
                     driver = new FirefoxDriver();
                     break;
                 }
-                default: {                                        //если не фаерфокс
+                default: {                                         //если не фаерфокс
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();                   // инициализация драйвера
                 }
             }
             driver.manage().window().maximize();
         }
-        return driver;                        //в др классе можем обращ к драйверу, в BaseTest например
+        return driver;                                             //в др классе можем обращ к драйверу, в BaseTest например
     }
 
     public static void closeDriver() {
-        driver.quit();                             //закрывает драйвер
-        driver = null;                             //и обнуляет ссылку на объект
+        driver.quit();                                             //закрывает драйвер
+        driver = null;                                             //и обнуляет ссылку на объект
     }
 }
