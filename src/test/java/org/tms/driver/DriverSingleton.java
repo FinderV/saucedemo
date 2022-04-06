@@ -14,7 +14,7 @@ public class DriverSingleton {         //1.
 
     public static WebDriver getDriver() {          //получ драйвера без созд обьекта
         if (null == driver) {
-            switch (System.getProperty("browser")) {
+            switch (System.getProperty("browser")) {            //задается в add configiration
                 case "firefox": {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
@@ -27,11 +27,11 @@ public class DriverSingleton {         //1.
             }
             driver.manage().window().maximize();
         }
-        return driver;                        //в др классе можем обращ к драйверу
+        return driver;                        //в др классе можем обращ к драйверу, в BaseTest например
     }
 
     public static void closeDriver() {
         driver.quit();                             //закрывает драйвер
-        driver = null;                             //обнуляет ссылку на объект
+        driver = null;                             //и обнуляет ссылку на объект
     }
 }
