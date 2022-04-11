@@ -9,6 +9,6 @@ public class InventoryPage extends Page {
     private WebElement nameOfMainPageSection;
 
     public String getTexOfNameOfMainPageSection(){             //метод смысл глагол getText...
-    return nameOfMainPageSection.getText();                    //получаем текст название констольной страницы
+    return nameOfMainPageSection.getText();                    //получаем текст название контрольной страницы
             }
 }

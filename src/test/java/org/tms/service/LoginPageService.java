@@ -12,7 +12,7 @@ public class LoginPageService {                              //вспомог к
     private LoginPage loginPage = new LoginPage();
     private User user = new User();
 
-    public InventoryPage login() {                           //успешно перешли на ту страницу, метод возвращ объект той страницы; мет login использ для LoginPageTest
+    public InventoryPage login() {                           //успешно перешли на ту стр-у, мет возвращ объект той страницы; мет login использ для LoginPageTest
         loginPage.openPage(LOGIN_PAGE_URL)                   //переход на страницу, запол поля, клик на кнопку, возвр страницу
                 .fillInUsername(user.getName())              //методы цепочкой из LoginPage, подтяг из User(менять зн)
                 .fillInPassword(user.getPassword())          //позвол не писать loginPage
