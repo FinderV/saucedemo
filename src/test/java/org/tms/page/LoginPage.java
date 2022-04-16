@@ -29,9 +29,9 @@ public class LoginPage extends Page {                   //имя класса, �
     public LoginPage fillInUsername(String userName) {   //имя метода глагол, заполняет поле логином
         //new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(username));   //стар, явн ожиню, ждет когда появ эл 10 сек, как только появ эл
         //new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(username)); //нов версия, не буд раб т к неяв ожид больше
-        waitVisibilityOf(username);                      // мет ждет отображ username, из Page
-        username.clear();                                //очистить поле перед вводом
-        username.sendKeys(userName);
+        waitVisibilityOf(username).sendKeys(userName);                      // мет ждет отображ username, из Page
+        //username.clear();                                //очистить поле перед вводом, в баз не нужен
+        //username.sendKeys(userName);                     // перенесли в waitVisibilityOf(username).sendKeys(userName);
         return this;                                     //  возвр обьект страницы
     }
 
@@ -43,8 +43,8 @@ public class LoginPage extends Page {                   //имя класса, �
     }
 
     public void clickLoginButton() {                                  //нажать кнопку
-        Waiter.waitForElementToBeClickable(loginButton);
-        waitElementToBeClickable(loginButton);                          // ожид кнопку, не обязат
-        loginButton.click();                                         // в др месте будет весь процесс залогинивания
+        //Waiter.waitForElementToBeClickable(loginButton);
+        waitElementToBeClickable(loginButton).click();                          // ожид кнопку, не обязат, можно подожд и взаимод в 1 строчке
+        //loginButton.click();                                         // в др месте будет весь процесс залогинивания
     }
 }

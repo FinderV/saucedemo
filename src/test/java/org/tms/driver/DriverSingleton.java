@@ -19,7 +19,7 @@ public class DriverSingleton {         //1.
             switch (System.getProperty("browser")) {            //задается в add configiration
                 case "firefox": {
                     WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
+                    driver = new FirefoxDriver();                    //вызов конструктора(созд класс FirefoxDriver), у интерф нет констр
                     break;
                 }
                 default: {                                         //если не фаерфокс

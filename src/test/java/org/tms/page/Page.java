@@ -20,7 +20,7 @@ public abstract class Page {                                     //2.   абст
     }
 
     //могл раб классы насл, можно отпр не только WebEl, также xpath
-    protected WebElement waitVisibilityOf(WebElement element) {                 // эл кот дожидаемся, в LoginPage
+    protected WebElement waitVisibilityOf(WebElement element) {                 // мет возвр ожид,эл кот дожидаемся, в LoginPage
         return new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT_SECONDS)).until(ExpectedConditions.visibilityOf(element));                                                          // ожидание
     }
 
